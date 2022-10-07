@@ -118,5 +118,6 @@ let songwhich =  document.getElementById('songwhich');
  masterplay.classList.remove('fa-circle-play');
      masterplay.classList.add('fa-circle-pause');
      gif.style.opacity = 1;
+     
 })
  
