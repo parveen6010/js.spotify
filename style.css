@@ -54,7 +54,7 @@ nav ul li{
 .bottom{
     position: sticky;
 
-    height: 85px;;
+    height: 100px;;
     background-color: black;
     bottom: 0;
     display: flex;
@@ -65,9 +65,11 @@ nav ul li{
     
 }
 
+
 .icon{
     margin-top: 14px;
-   
+    
+    
 }
 
 .icon i{
@@ -114,3 +116,9 @@ nav ul li{
     opacity: 0;
     transition: opacity 0.1s ease-in ;
 }
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
