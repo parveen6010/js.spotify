@@ -45,7 +45,7 @@ nav ul li{
    width: 70%;
    border-radius: 12px;
    padding: 34px;
-   background-image: url('bg.jpg');
+   
    background-size: 1030px  ;
     
 }
@@ -83,6 +83,7 @@ nav ul li{
 
 .songItem{
     height: 50px;
+    width: 60vh;
     display: flex;
     background-color: white;
     color: black;
@@ -90,6 +91,11 @@ nav ul li{
     align-items: center;
     font-weight: bolder;
     border-radius: 34px;
+}
+
+.songlistplay{
+    display: flex;
+    font-size: smaller;
 }
 .songItem img{
     width: 43px;
@@ -116,9 +122,96 @@ nav ul li{
     opacity: 0;
     transition: opacity 0.1s ease-in ;
 }
+.songname{
+    font-size: 13px;
+    
+    color: black;
+}
 
-@media only screen and (max-width: 600px) {
-    body {
-      background-color: lightblue;
+.songBanner img{
+    height: 70vh;
+    width: 80vh;
+
+}
+@media only screen and (max-width: 1024px) {
+    .songBanner img{
+        width: 100%;
+        height: auto;
+      }
+
+      .songlist{
+        display: inline-block;
+        font-size: 20px;
+       height: auto;
+       width: auto;
     }
+
+    .songItem{
+        width: 100%;
+        height: auto;
+      
+        
+    }
+    .timestamp{
+        font-size: smaller;
+        text-align: center;
+        display: flex;
+        
+        
+    }
+    .songname{
+        font-size: small;
+    }
+    .songItemplay{
+        padding-left: 5px;
+    font-size: smaller;
+        }
+  }
+  @media only screen and (max-width: 480px) {
+    .songlist{
+        display: inline-block;
+        font-size: 20px;
+       height: auto;
+       width: auto;
+    }
+
+    .songItem{
+        width: auto;
+        height: auto;
+        font-size: 22px;
+        
+    }
+
+  .container{
+    flex-direction: column;
+  }
+
+  .songBanner img{
+    width: 100%;
+    height: auto;
+  }
+
+  .songItem{
+    font-size: initial;
+}
+.songname{
+    font-size: small;
+}
+.timestamp{
+    font-size: small;
+    text-align: center;
+    display: flex;
+    
+    
+}
+.songItemplay{
+    padding-left: 5px;
+font-size: small;
+    }
+
+    .songinfo{
+        padding: 0;
+        font-size: 9px;
+    }
+   
   }

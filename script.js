@@ -12,7 +12,7 @@ let songwhich =  document.getElementById('songwhich');
   let songs = [
     {songName: "Count on me-Brouo Mars" , filePath: "songs/1.mp3" , coverPath : "covers/1.jpg" },
     {songName: "Peter pan was right-Anson Seabra" , filePath : "songs/2.mp3" , coverPath : "covers/2.jpg"},
-    {songName: "Ice heart-Powfu " , filePath : "songs/3.mp3" , coverPath : "covers/3.jpg"},
+    {songName: "Ice heart-Powfu" , filePath : "songs/3.mp3" , coverPath : "covers/3.jpg"},
     {songName: "Different class,same boat-Powfu" , filePath : "songs/4.mp3" , coverPath : "covers/4.jpg"},
     {songName: "Baby I love you-Tiffany Avlord" , filePath : "songs/5.mp3" , coverPath : "covers/5.jpg"},
     {songName: "Death bed-Powfu" , filePath : "songs/6.mp3" , coverPath : "covers/6.jpg"},
@@ -34,22 +34,7 @@ let songwhich =  document.getElementById('songwhich');
   
      }
 
- masterplay.addEventListener( 'click' , ()  => {
 
-     if(audioElement.paused || audioElement.currentTime <= 0){
-        audioElement.play();
-        masterplay.classList.remove('fa-circle-play');
-        masterplay.classList.add('fa-circle-pause');
-        gif.style.opacity = 1;
-
-     }else{
-      audioElement.pause();
-      masterplay.classList.remove('fa-circle-pause');
-      masterplay.classList.add('fa-circle-play');
-      gif.style.opacity = 0;
-      
-   }
- })
 
  audioElement.addEventListener('timeupdate' , () => {
 
@@ -72,7 +57,9 @@ let songwhich =  document.getElementById('songwhich');
     songIndex = parseInt(e.target.id);
     e.target.classList.remove('fa-circle-play');
     e.target.classList.add('fa-circle-pause');
+    songwhich.innerText = songs[songIndex-1].songName;
     audioElement.src = `songs/${songIndex}.mp3`;
+    
     audioElement.currentTime = 0;
     audioElement.play();
     masterplay.classList.remove('fa-circle-play');
@@ -121,3 +108,24 @@ let songwhich =  document.getElementById('songwhich');
      
 })
  
+masterplay.addEventListener( 'click' , ()  => {
+
+  if(audioElement.paused || audioElement.currentTime <= 0){
+     audioElement.play();
+     
+     masterplay.classList.remove('fa-circle-play');
+     masterplay.classList.add('fa-circle-pause');
+     gif.style.opacity = 1;
+
+
+  }else{
+   audioElement.pause();
+   masterplay.classList.remove('fa-circle-pause');
+   masterplay.classList.add('fa-circle-play');
+   gif.style.opacity = 0;
+   makeallplay();
+   
+}
+})
+
+s
